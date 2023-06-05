@@ -41,10 +41,26 @@ int main()
     cout << "Enter in Number to be Added to Filter (Enter -1 to quit program): "<<endl;
     double input;
     cin >> input;
+
+    while (!cin)
+    {
+        cout << "Please Enter Valid Number (Enter -1 to quit program): "<<endl;
+        cin.clear();
+        cin.ignore();
+        cin >> input;
+    }
+
     while(input != -1)
     {
         cout<< "The Current Step Average is: " << mov.Step(input) <<endl <<endl;
         cout << "Enter in Number to be Added to Filter (Enter -1 to quit program): "<<endl;
         cin >> input;
+        while (!cin)
+        {
+            cout << "Please Enter Valid Number (Enter -1 to quit program): "<<endl;
+            cin.clear();
+            cin.ignore();
+            cin >> input;
+        }
     }
 }
