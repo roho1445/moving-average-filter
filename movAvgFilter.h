@@ -2,6 +2,7 @@
 #define MOVAVGFILTER
 
 #include <queue>
+#include <iostream>
 
 template<typename Scalar, size_t N>
 class MovingAverageFilter
