@@ -1,6 +1,6 @@
 #pragma once
 
-#include <queue>
+#include <cstddef>
 
 template<typename Scalar, size_t N>
 class MovingAverageFilter
