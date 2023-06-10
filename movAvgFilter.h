@@ -6,10 +6,7 @@ template<typename Scalar, size_t N>
 class MovingAverageFilter
 {
 public:
-    MovingAverageFilter() //Adding constructor to initialize private variable
-    {
-        sum = 0; //Using Constructor to initialize private sum variable to 0
-    }
+    MovingAverageFilter() : sum(0) {} //Adding constructor to initialize private variable
 
     Scalar Step(const Scalar& input)
     {
