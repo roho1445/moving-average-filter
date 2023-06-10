@@ -1,8 +1,6 @@
-#ifndef MOVAVGFILTER
-#define MOVAVGFILTER
+#pragma once
 
 #include <queue>
-#include <iostream>
 
 template<typename Scalar, size_t N>
 class MovingAverageFilter
@@ -40,5 +38,3 @@ private:
     std::queue<Scalar> vals; //Queue to keep track of last N elements inputted
     Scalar sum; //Using sum variable to track the sum of all elements added thus far
 };
-
-#endif
