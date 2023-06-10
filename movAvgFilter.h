@@ -1,12 +1,19 @@
 #pragma once
 
 #include <cstddef>
+#include <type_traits>
 
 template<typename Scalar, size_t N>
 class MovingAverageFilter
 {
+    static_assert(std::is_floating_point<Scalar>::value, "Scalar must be a floating-point type");
+    static_assert(N > 0, "N must be greater than 0");
+
 public:
-    MovingAverageFilter() : sum(0), arrSize(0), oldInd(0) {} //Adding constructor to initialize private variable
+    MovingAverageFilter() : sum(0), arrSize(0), oldInd(0)
+    {
+        static_assert(N > 0, "N must be greater than 0");
+    } //Adding constructor to initialize private variable
 
     Scalar Step(const Scalar& input)
     {
