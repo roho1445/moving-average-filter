@@ -3,6 +3,7 @@
 
 int main()
 {
+    
     MovingAverageFilter<double, 2> mov; //Initialize Filter to take average of last 2 elements and return average as double
     std::cout << "Enter in Number to be Added to Filter (Enter -1 to quit program): "<< std::endl;
     double input;
